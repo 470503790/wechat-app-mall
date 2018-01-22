@@ -1,0 +1,60 @@
+.section{ position: absolute; width: 100%; height: 100% ; overflow: hidden;background-color:#F2f2f2;
+}
+.left{ position: absolute; left: 0; top: 0; height: 100%; width: 90px; background: #F6F6F6; text-align: center;font-size:28rpx;}
+.left::before{ content: ""; position: absolute; background: #dcdcdc; right: 0; top: 0; height: 100%; }
+.left view.active{ background: #FFF; position: relative; z-index: 2;}
+.left view{ display: block; height: 60px; line-height: 60px; border-bottom: 0px solid #dcdcdc;}
+
+.right{ margin-left: 90px; height: 100%; overflow: hidden; width: auto;background: #fff;}
+.right text{ font-size: 15px}
+.typeTree{ padding-top: 10px;width: 100%}
+.typeTree .item{  text-align: center; display: inline-block; vertical-align: top;}
+.typeTree .brand,
+.typeTree .category{ flex-wrap: wrap; overflow: hidden;display: inline-block;width: 40%;margin-left: 6%}
+.typeTree .title{ padding: 10px 0; display: block; color: #333;white-space:nowrap;text-overflow: ellipsis;font-size: 24rpx;overflow: hidden;}
+.typeTree image { width: 100px; margin: 0 auto;}
+.typeTree .brand image{ height: 100px;}
+.typeTree .category image{ height: 85px;}
+.typeTree .category{ padding-bottom: 10px;}
+.item text{ padding-bottom: 10px; display: block;}
+
+.goods-container{
+    display: flex;
+    justify-content: space-between;  
+    flex-wrap:wrap;
+    box-sizing: content-box;
+    padding: 12rpx;
+  }
+  .goods-box{
+    width: 268rpx;
+    height: 380rpx;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 24rpx;
+  }
+  .goods-box .img-box{
+    width: 268rpx;
+    height: 268rpx;
+    overflow: hidden;
+  }
+  .goods-box .img-box image{
+     width: 268rpx;
+     height: 268rpx;
+     display: block;
+  }
+  .goods-box .goods-title{
+    width: 268rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24rpx;
+    padding: 24rpx 0 0rpx 0;
+    color:#000;
+  }
+  .goods-box .goods-price{
+    width: 268rpx;
+    overflow: hidden;
+    font-size: 24rpx;
+    padding: 24rpx 0;
+    color:#e64340;
+  }

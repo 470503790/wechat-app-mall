@@ -14,6 +14,7 @@ Page({
     categories: [],
     activeCategoryId: 0,
     goods:[],
+    pageNo:1,
     scrollTop:"0",
     loadingMoreHidden:true,
 

@@ -1,0 +1,29 @@
+<view class="section">
+    <!-- 左侧类型 -->
+    <scroll-view scroll-y="true" class="left">
+        <view wx:for="{{types}}" wx:key="typeId" data-type-id="{{item.id}}" bindtap="tapType" class="{{item.id == currType ? 'active' : ''}}" style="font-size:33rpx">
+            {{item.name}}
+        </view>
+    </scroll-view>
+
+    <!-- 右侧数据 -->
+    <scroll-view scroll-y="true" class="right" bindscrolltolower="loadMore">
+        <view class="goods-container">
+            <view class="goods-box" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+               <view class="img-box">
+                  <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true"/>
+               </view>
+               <view class="goods-title">{{item.name}}</view>
+               <view style='display:flex;'>
+                <view class="goods-price">¥ {{item.minPrice}}</view>
+                <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
+               </view>           
+            </view>
+        </view>
+        <view class="tips1">
+            <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <icon type="waiting" size="45"/><text>玩命的加载中...</text></view>
+            <view wx:else class="no-more-goods">没有更多啦</view>
+          </view>
+    </scroll-view>
+</view>

@@ -44,6 +44,6 @@
   </view>
   
   <view style="height:20rpx;background: #eee;width:100%;"></view>
-  <view class="version">Powered by EastWorld v {{version}}</view>
+  <view class="version" bindtap="callMe">技术支持©深思软件 13692950061</view>
   <view style="height:20rpx;background: #eee;width:100%;"></view>
 </view>

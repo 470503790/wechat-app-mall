@@ -236,3 +236,8 @@ swiper-item image {
   border:none;
   position: relative;
 }
+.goods-scroll-view{
+  height: 100%; 
+  overflow: hidden; 
+  width: auto;
+}

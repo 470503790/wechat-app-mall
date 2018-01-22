@@ -36,7 +36,7 @@ Page({
   aboutUs : function () {
     wx.showModal({
       title: '关于我们',
-      content: '本系统基于开源小程序商城系统 https://github.com/EastWorld/wechat-app-mall 搭建，祝大家使用愉快！',
+      content: '本系统由深思软件设计开发 微信(手机同号)：13692950061！',
       showCancel:false
     })
   },
@@ -181,6 +181,12 @@ Page({
   withdraw: function () {
     wx.navigateTo({
       url: "/pages/withdraw/index"
+    })
+  },
+  callMe:function(){
+    console.info("手机")
+    wx.makePhoneCall({
+      phoneNumber: '13692950061'
     })
   }
 })
