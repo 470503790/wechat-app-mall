@@ -28,7 +28,8 @@ Page({
           
           that.setData({
             types: list,
-            currType:list[0].id
+            currType:list[0].id,
+            hasMore:true
           });
 
           wx.request({
@@ -42,6 +43,7 @@ Page({
               if (res.data.code == 0) {
                 that.setData({
                   goods: res.data.data,
+                  hasMore:false
                 });
               } else {
                 that.setData({
@@ -81,7 +83,8 @@ Page({
 
     that.setData({
       currType: currType,
-      pageNo:1
+      pageNo:1,
+      hasMore:true
     });
     console.log(currType);
     wx.request({
@@ -95,6 +98,7 @@ Page({
         if (res.data.code == 0) {
           that.setData({
             goods: res.data.data,
+            hasMore:false
           });
         } else {
           that.setData({

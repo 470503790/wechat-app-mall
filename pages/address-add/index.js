@@ -39,6 +39,16 @@ Page({
       })
       return
     }
+    console.info(this.checkMobile(mobile))
+    if(this.checkMobile(mobile)==false){
+      console.info("检测手机号")
+      wx.showModal({
+        title: '提示',
+        content: '手机号码无效',
+        showCancel:false
+      })
+      return
+    }
     if (this.data.selProvince == "请选择"){
       wx.showModal({
         title: '提示',
@@ -289,5 +299,11 @@ Page({
         });
       }
     })
-  }
+  },
+  checkMobile:function(phone) {
+    if(!(/^1[3|4|5|8][0-9]\d{8}$/.test(phone))){
+      return false
+     } 
+    return true
+}
 })
